@@ -1,3 +1,6 @@
+nftset=/.githubcopilot.com/4#inet#fw4#vpn_domains
+nftset=/.microsoft.com/4#inet#fw4#vpn_domains
+nftset=/.visualstudio.com/4#inet#fw4#vpn_domains
 nftset=/.ua/4#inet#fw4#vpn_domains
 nftset=/10minutemail.com/4#inet#fw4#vpn_domains
 nftset=/1337x.to/4#inet#fw4#vpn_domains
