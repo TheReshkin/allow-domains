@@ -5,7 +5,6 @@ nftset=/game.clashroyaleapp.com/4#inet#fw4#vpn_domains
 nftset=/.etsy.com/4#inet#fw4#vpn_domains
 nftset=/.vscode-unpkg.net/4#inet#fw4#vpn_domains
 nftset=/.vscode-cdn.net/4#inet#fw4#vpn_domains
-nftset=/.github.com/4#inet#fw4#vpn_domains
 nftset=/education.github.com/4#inet#fw4#vpn_domains
 nftset=/.githubcopilot.com/4#inet#fw4#vpn_domains
 nftset=/.microsoft.com/4#inet#fw4#vpn_domains
