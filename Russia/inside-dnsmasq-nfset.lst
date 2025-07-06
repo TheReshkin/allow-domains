@@ -1,3 +1,4 @@
+nftset=/api.github.com/4#inet#fw4#vpn_domains
 nftset=/.pcbway.com/4#inet#fw4#vpn_domains
 nftset=/.rutracker.org/4#inet#fw4#vpn_domains
 nftset=/.ultimaker.com/4#inet#fw4#vpn_domains
