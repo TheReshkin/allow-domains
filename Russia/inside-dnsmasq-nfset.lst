@@ -1,3 +1,5 @@
+nftset=/./4#inet#fw4#vpn_domains
+nftset=/./4#inet#fw4#vpn_domains
 nftset=/.apkmirror.com/4#inet#fw4#vpn_domains
 nftset=/.mremoteng.org/4#inet#fw4#vpn_domains
 nftset=/www.speedtest.net/4#inet#fw4#vpn_domains
