@@ -1,3 +1,13 @@
+nftset=/akamai.net/4#inet#fw4#vpn_domains
+nftset=/appsflyersdk.com/4#inet#fw4#vpn_domains
+nftset=/ibytedtos.com/4#inet#fw4#vpn_domains
+nftset=/oraclecloud.com/4#inet#fw4#vpn_domains
+nftset=/tiktokcdn.com/4#inet#fw4#vpn_domains
+nftset=/tiktokcdn-eu.com/4#inet#fw4#vpn_domains
+nftset=/tiktokcdn-us.com/4#inet#fw4#vpn_domains
+nftset=/tiktokrow-cdn.com/4#inet#fw4#vpn_domains
+nftset=/tiktokv.com/4#inet#fw4#vpn_domains
+nftset=/ttlivecdn.com/4#inet#fw4#vpn_domains
 nftset=/redislabs.com/4#inet#fw4#vpn_domains
 nftset=/openrouter.ai/4#inet#fw4#vpn_domains
 nftset=/opensanctions.org/4#inet#fw4#vpn_domains
