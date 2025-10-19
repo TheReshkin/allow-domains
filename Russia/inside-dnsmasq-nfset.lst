@@ -1,3 +1,13 @@
+nftset=/redislabs.com/4#inet#fw4#vpn_domains
+nftset=/openrouter.ai/4#inet#fw4#vpn_domains
+nftset=/opensanctions.org/4#inet#fw4#vpn_domains
+nftset=/lostfilm.download/4#inet#fw4#vpn_domains
+nftset=/deezer.com/4#inet#fw4#vpn_domains
+nftset=/cloudtorrents.com/4#inet#fw4#vpn_domains
+nftset=/bitnami.com/4#inet#fw4#vpn_domains
+nftset=/audiobookbay.lu/4#inet#fw4#vpn_domains
+nftset=/apkmirror.com/4#inet#fw4#vpn_domains
+nftset=/app.zerossl.com/4#inet#fw4#vpn_domains
 nftset=/.spotify.com/4#inet#fw4#vpn_domains
 nftset=/.apkmirror.com/4#inet#fw4#vpn_domains
 nftset=/.mremoteng.org/4#inet#fw4#vpn_domains
