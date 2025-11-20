@@ -1,3 +1,4 @@
+nftset=/.ikea.com/4#inet#fw4#vpn_domains
 nftset=/akamai.net/4#inet#fw4#vpn_domains
 nftset=/appsflyersdk.com/4#inet#fw4#vpn_domains
 nftset=/ibytedtos.com/4#inet#fw4#vpn_domains
