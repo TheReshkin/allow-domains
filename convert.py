@@ -1,4 +1,4 @@
-#!/usr/bin/python3.10
+#!/usr/bin/env python3
 
 import tldextract
 import urllib.request
@@ -20,7 +20,13 @@ DiscordSubnets = 'Subnets/IPv4/discord.lst'
 MetaSubnets = 'Subnets/IPv4/meta.lst'
 TwitterSubnets = 'Subnets/IPv4/twitter.lst'
 TelegramSubnets = 'Subnets/IPv4/telegram.lst'
-ExcludeServices = {"telegram.lst"}
+CloudflareSubnets = 'Subnets/IPv4/cloudflare.lst'
+HetznerSubnets = 'Subnets/IPv4/hetzner.lst'
+OVHSubnets = 'Subnets/IPv4/ovh.lst'
+DigitalOceanSubnets = 'Subnets/IPv4/digitalocean.lst'
+CloudfrontSubnets = 'Subnets/IPv4/cloudfront.lst'
+RobloxSubnets = 'Subnets/IPv4/roblox.lst'
+ExcludeServices = {"telegram.lst", "cloudflare.lst", "google_ai.lst", "google_play.lst", 'hetzner.lst', 'ovh.lst', 'digitalocean.lst', 'cloudfront.lst', 'hodca.lst', 'roblox.lst'}
 
 def raw(src, out):
     domains = set()
@@ -52,7 +58,6 @@ def raw(src, out):
 
 def dnsmasq(src, out, remove={'google.com'}):
     domains = set()
-    domains_single = set()
     files = []
 
     if isinstance(src, list):
@@ -86,7 +91,6 @@ def dnsmasq(src, out, remove={'google.com'}):
 
 def clashx(src, out, remove={'google.com'}):
     domains = set()
-    domains_single = set()
     files = []
 
     if isinstance(src, list):
@@ -115,7 +119,6 @@ def clashx(src, out, remove={'google.com'}):
 
 def kvas(src, out, remove={'google.com'}):
     domains = set()
-    domains_single = set()
     files = []
 
     if isinstance(src, list):
@@ -144,7 +147,6 @@ def kvas(src, out, remove={'google.com'}):
 
 def mikrotik_fwd(src, out, remove={'google.com'}):
     domains = set()
-    domains_single = set()
     files = []
 
     if isinstance(src, list):
@@ -221,7 +223,7 @@ def generate_srs_for_categories(directories, output_json_directory='JSON', compi
     os.makedirs(output_json_directory, exist_ok=True)
     os.makedirs(compiled_output_directory, exist_ok=True)
 
-    exclude = {"meta", "twitter", "discord"}
+    exclude = {"meta", "twitter", "discord", "telegram", "hetzner", "ovh", "digitalocean", "cloudfront", "roblox"}
 
     for directory in directories:
         for filename in os.listdir(directory):
@@ -237,21 +239,21 @@ def generate_srs_for_categories(directories, output_json_directory='JSON', compi
                         if domain:
                             domains.append(domain)
 
-            data = {
-                "version": 3,
-                "rules": [
-                    {
-                        "domain_suffix": domains
-                    }
-                ]
-            }
+                data = {
+                    "version": 3,
+                    "rules": [
+                        {
+                            "domain_suffix": domains
+                        }
+                    ]
+                }
 
-            output_file_path = os.path.join(output_json_directory, f"{os.path.splitext(filename)[0]}.json")
+                output_file_path = os.path.join(output_json_directory, f"{os.path.splitext(filename)[0]}.json")
 
-            with open(output_file_path, 'w', encoding='utf-8') as output_file:
-                json.dump(data, output_file, indent=4)
+                with open(output_file_path, 'w', encoding='utf-8') as output_file:
+                    json.dump(data, output_file, indent=4)
 
-            print(f"JSON file generated: {output_file_path}")
+                print(f"JSON file generated: {output_file_path}")
 
     print("\nCompile JSON files to .srs files...")
     for filename in os.listdir(output_json_directory):
@@ -330,6 +332,18 @@ def generate_srs_combined(input_subnets_file, input_domains_file, output_json_di
                 }
             ]
         }
+    elif input_subnets_file == "Subnets/IPv4/telegram.lst" and input_domains_file == "voice_messengers":
+        data = {
+            "version": 3,
+            "rules": [
+                {
+                    "network": ["udp"],
+                    "ip_cidr": subnets,
+                    "port": [1400],
+                    "port_range": ["596:599"]
+                }
+            ]
+        }
     else:
         data = {
             "version": 3,
@@ -341,7 +355,10 @@ def generate_srs_combined(input_subnets_file, input_domains_file, output_json_di
             ]
         }
 
-    filename = os.path.splitext(os.path.basename(input_subnets_file))[0]
+    if input_domains_file == "voice_messengers":
+        filename = "voice_messengers"
+    else:
+        filename = os.path.splitext(os.path.basename(input_subnets_file))[0]
     output_file_path = os.path.join(output_json_directory, f"{filename}.json")
 
     with open(output_file_path, 'w', encoding='utf-8') as output_file:
@@ -359,28 +376,55 @@ def generate_srs_combined(input_subnets_file, input_domains_file, output_json_di
         print(f"Compile error {output_file_path}: {e}")
 
 
-def prepare_dat_domains(domains_or_dirs, output_name):
+def prepare_dat_domains(domains, output_name, dirs=[]):
     output_lists_directory = 'geosite_data'
-
     os.makedirs(output_lists_directory, exist_ok=True)
 
-    extracted_domains = []
+    domain_attrs = {domain: [] for domain in domains}
 
-    if all(os.path.isdir(d) for d in domains_or_dirs):
-        for directory in domains_or_dirs:
-            for filename in os.listdir(directory):
-                file_path = os.path.join(directory, filename)
+    for directory in dirs:
+        if not os.path.isdir(directory):
+            continue
+        for filename in os.listdir(directory):
+            file_path = os.path.join(directory, filename)
+            if not os.path.isfile(file_path):
+                continue
 
-                if os.path.isfile(file_path):
-                    with open(file_path, 'r', encoding='utf-8') as file:
-                        attribute = os.path.splitext(filename)[0]
-                        extracted_domains.extend(f"{line.strip()} @{attribute}" for line in file if line.strip())
-    else:
-        extracted_domains = domains_or_dirs
+            attribute = os.path.splitext(filename)[0].replace('_', '-')
+
+            with open(file_path, 'r', encoding='utf-8') as f:
+                for line in f:
+                    domain = line.strip()
+                    if not domain:
+                        continue
+                    if domain in domain_attrs:
+                        domain_attrs[domain].append(f" @{attribute}")
 
     output_file_path = os.path.join(output_lists_directory, output_name)
-    with open(output_file_path, 'w', encoding='utf-8') as file:
-        file.writelines(f"{name}\n" for name in extracted_domains)
+    with open(output_file_path, 'w', encoding='utf-8') as out_f:
+        for domain, attrs in domain_attrs.items():
+            line = domain + "".join(attrs)
+            out_f.write(f"{line}\n")
+
+def prepare_dat_combined(dirs):
+    import shutil
+    
+    output_lists_directory = 'geosite_data'
+    os.makedirs(output_lists_directory, exist_ok=True)
+
+    for directory in dirs:
+        if not os.path.isdir(directory):
+            continue
+
+        for filename in os.listdir(directory):
+            source_path = os.path.join(directory, filename)
+            if not os.path.isfile(source_path):
+                continue
+
+            new_name = os.path.splitext(filename)[0].replace('_', '-')
+            destination_path = os.path.join(output_lists_directory, new_name)
+
+            shutil.copyfile(source_path, destination_path)
  
 def generate_dat_domains(data_path='geosite_data', output_name='geosite.dat', output_directory='DAT'):
     os.makedirs(output_directory, exist_ok=True)
@@ -454,9 +498,19 @@ if __name__ == '__main__':
     generate_srs_combined(TwitterSubnets, "Services/twitter.lst")
     generate_srs_combined(MetaSubnets, "Services/meta.lst")
     generate_srs_combined(TelegramSubnets, "Services/telegram.lst")
+    generate_srs_combined(CloudflareSubnets, "Services/cloudflare.lst")
+    generate_srs_combined(HetznerSubnets, "Services/hetzner.lst")
+    generate_srs_combined(OVHSubnets, "Services/ovh.lst")
+    generate_srs_combined(DigitalOceanSubnets, "Services/digitalocean.lst")
+    generate_srs_combined(CloudfrontSubnets, "Services/cloudfront.lst")
+    generate_srs_combined(RobloxSubnets, "Services/roblox.lst")
+
+    # Sing-box voice for messengers
+    generate_srs_combined(TelegramSubnets, "voice_messengers")
 
     # Xray domains
-    prepare_dat_domains(directories, 'russia-inside')
+    prepare_dat_domains(russia_inside, 'russia-inside', directories)
     prepare_dat_domains(russia_outside, 'russia-outside')
     prepare_dat_domains(ukraine_inside, 'ukraine-inside')
+    prepare_dat_combined(directories)
     generate_dat_domains()
