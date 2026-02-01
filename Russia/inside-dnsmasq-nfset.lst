@@ -1,3 +1,4 @@
+nftset=/.amazon.com/4#inet#fw4#vpn_domains
 nftset=/.xyops.io/4#inet#fw4#vpn_domains
 nftset=/.netsarang.net/4#inet#fw4#vpn_domains
 nftset=/.directus.io/4#inet#fw4#vpn_domains
