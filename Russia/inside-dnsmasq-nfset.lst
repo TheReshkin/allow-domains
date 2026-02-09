@@ -1,3 +1,4 @@
+nftset=/.dbvis.com/4#inet#fw4#vpn_domains
 nftset=/.opensource.org/4#inet#fw4#vpn_domains
 nftset=/.amazon.com/4#inet#fw4#vpn_domains
 nftset=/.xyops.io/4#inet#fw4#vpn_domains
