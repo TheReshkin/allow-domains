@@ -1,3 +1,4 @@
+nftset=/.telegram.org/4#inet#fw4#vpn_domains
 nftset=/.liquibase.com/4#inet#fw4#vpn_domains
 nftset=/.tempo.io/4#inet#fw4#vpn_domains
 nftset=/.dbvis.com/4#inet#fw4#vpn_domains
