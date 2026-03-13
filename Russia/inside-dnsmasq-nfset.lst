@@ -1,3 +1,4 @@
+nftset=/.cr.yandex/4#inet#fw4#vpn_domains
 nftset=/.tapeop.dev/4#inet#fw4#vpn_domains
 nftset=/.telegram.org/4#inet#fw4#vpn_domains
 nftset=/.liquibase.com/4#inet#fw4#vpn_domains
