@@ -37,7 +37,6 @@ nftset=/app.zerossl.com/4#inet#fw4#vpn_domains
 nftset=/.spotify.com/4#inet#fw4#vpn_domains
 nftset=/.apkmirror.com/4#inet#fw4#vpn_domains
 nftset=/.mremoteng.org/4#inet#fw4#vpn_domains
-nftset=/www.speedtest.net/4#inet#fw4#vpn_domains
 nftset=/api.github.com/4#inet#fw4#vpn_domains
 nftset=/.pcbway.com/4#inet#fw4#vpn_domains
 nftset=/.rutracker.org/4#inet#fw4#vpn_domains
