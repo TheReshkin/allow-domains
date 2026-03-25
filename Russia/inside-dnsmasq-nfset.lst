@@ -1,4 +1,4 @@
-nftset=/.duckdns.org/4#inet#fw4#vpn_domains
+nftset=/.gitea.io/4#inet#fw4#vpn_domains
 nftset=/youtube.com/4#inet#fw4#vpn_domains
 nftset=/.immich.app/4#inet#fw4#vpn_domains
 nftset=/.cr.yandex/4#inet#fw4#vpn_domains
