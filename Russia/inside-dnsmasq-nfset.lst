@@ -1,3 +1,4 @@
+nftset=/.grafana.com/4#inet#fw4#vpn_domains
 nftset=/.geeksterminal.com/4#inet#fw4#vpn_domains
 nftset=/.gitea.io/4#inet#fw4#vpn_domains
 nftset=/youtube.com/4#inet#fw4#vpn_domains
