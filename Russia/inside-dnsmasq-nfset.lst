@@ -1,3 +1,7 @@
+nftset=/.githubcopilot.com/4#inet#fw4#vpn_domains
+nftset=/education.github.com/4#inet#fw4#vpn_domains
+nftset=/api.github.com/4#inet#fw4#vpn_domains
+nftset=/.vscode-cdn.net/4#inet#fw4#vpn_domains
 nftset=/.grafana.com/4#inet#fw4#vpn_domains
 nftset=/.geeksterminal.com/4#inet#fw4#vpn_domains
 nftset=/.gitea.io/4#inet#fw4#vpn_domains
