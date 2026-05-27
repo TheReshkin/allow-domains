@@ -1,3 +1,13 @@
+nftset=/.anthropic.com/4#inet#fw4#vpn_domains
+nftset=/.api.anthropic.com/4#inet#fw4#vpn_domains
+nftset=/.claude.ai/4#inet#fw4#vpn_domains
+nftset=/.downloads.claude.ai/4#inet#fw4#vpn_domains
+nftset=/.intercomcdn.com/4#inet#fw4#vpn_domains
+nftset=/.datadoghq.com/4#inet#fw4#vpn_domains
+nftset=/.datadog-api.com/4#inet#fw4#vpn_domains
+nftset=/.datadoghq.eu/4#inet#fw4#vpn_domains
+nftset=/.ddog-gov.com/4#inet#fw4#vpn_domains
+nftset=/.datad0g.com/4#inet#fw4#vpn_domains
 nftset=/.skilljar.com/4#inet#fw4#vpn_domains
 nftset=/.mcp.run/4#inet#fw4#vpn_domains
 nftset=/.packages.k8s.io/4#inet#fw4#vpn_domains
