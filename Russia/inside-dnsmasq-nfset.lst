@@ -1,3 +1,4 @@
+nftset=/.dev/4#inet#fw4#vpn_domains
 nftset=/.kgateway.dev/4#inet#fw4#vpn_domains
 nftset=/.keycloak.org/4#inet#fw4#vpn_domains
 nftset=/.novu.co/4#inet#fw4#vpn_domains
