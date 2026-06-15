@@ -1,3 +1,4 @@
+nftset=/.cert-manager.io/4#inet#fw4#vpn_domains
 nftset=/.aws.com/4#inet#fw4#vpn_domains
 nftset=/.goharbor.io/4#inet#fw4#vpn_domains
 nftset=/.dev/4#inet#fw4#vpn_domains
