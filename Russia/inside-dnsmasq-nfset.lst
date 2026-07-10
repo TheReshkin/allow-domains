@@ -1,3 +1,4 @@
+nftset=/.org/4#inet#fw4#vpn_domains
 nftset=/.epicgames.com/4#inet#fw4#vpn_domains
 nftset=/.io/4#inet#fw4#vpn_domains
 nftset=/.envoyproxy.io/4#inet#fw4#vpn_domains
