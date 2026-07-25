@@ -1,3 +1,4 @@
+nftset=/.kimi.ai/4#inet#fw4#vpn_domains
 nftset=/.directus.com/4#inet#fw4#vpn_domains
 nftset=/.org/4#inet#fw4#vpn_domains
 nftset=/.epicgames.com/4#inet#fw4#vpn_domains
