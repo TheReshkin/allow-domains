@@ -1,3 +1,12 @@
+nftset=/.api.anthropic.com/4#inet#fw4#vpn_domains
+nftset=/.claude.ai/4#inet#fw4#vpn_domains
+nftset=/.platform.claude.com/4#inet#fw4#vpn_domains
+nftset=/.mcp-proxy.anthropic.com/4#inet#fw4#vpn_domains
+nftset=/.downloads.claude.ai/4#inet#fw4#vpn_domains
+nftset=/.storage.googleapis.com/4#inet#fw4#vpn_domains
+nftset=/.bridge.claudeusercontent.com/4#inet#fw4#vpn_domains
+nftset=/.claudeusercontent.com/4#inet#fw4#vpn_domains
+nftset=/.raw.githubusercontent.com/4#inet#fw4#vpn_domains
 nftset=/.gemini.google.com/4#inet#fw4#vpn_domains
 nftset=/.sherlockosint.com/4#inet#fw4#vpn_domains
 nftset=/.moonshot.ai/4#inet#fw4#vpn_domains
