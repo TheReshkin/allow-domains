@@ -1,3 +1,4 @@
+nftset=/.thepiratebay.org/4#inet#fw4#vpn_domains
 nftset=/.k8s.io/4#inet#fw4#vpn_domains
 nftset=/.bybit.com/4#inet#fw4#vpn_domains
 nftset=/.cdn.web-ide.gitlab-static.net/4#inet#fw4#vpn_domains
