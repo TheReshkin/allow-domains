@@ -1,3 +1,4 @@
+nftset=/.akamai.net/4#inet#fw4#vpn_domains
 nftset=/.leolabs.space/4#inet#fw4#vpn_domains
 nftset=/.isitdownrightnow.com/4#inet#fw4#vpn_domains
 nftset=/.bandsintown.com/4#inet#fw4#vpn_domains
