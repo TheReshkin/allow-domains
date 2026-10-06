@@ -1,3 +1,4 @@
+nftset=/.tampermonkey.net/4#inet#fw4#vpn_domains
 nftset=/.cheburcheck.ru/4#inet#fw4#vpn_domains
 nftset=/.cheburnet.net/4#inet#fw4#vpn_domains
 nftset=/.akamai.net/4#inet#fw4#vpn_domains
