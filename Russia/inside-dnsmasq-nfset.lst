@@ -1,4 +1,4 @@
-nftset=/virustotal.com/4#inet#fw4#vpn_domains
+nftset=/.virustotal.com/4#inet#fw4#vpn_domains
 nftset=/.copernicus.eu/4#inet#fw4#vpn_domains
 nftset=/.zomro.com/4#inet#fw4#vpn_domains
 nftset=/.tampermonkey.net/4#inet#fw4#vpn_domains
