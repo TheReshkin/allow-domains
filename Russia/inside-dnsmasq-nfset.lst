@@ -1,3 +1,4 @@
+nftset=/.com/4#inet#fw4#vpn_domains
 nftset=/.randaddress.com/4#inet#fw4#vpn_domains
 nftset=/.happ-proxy.com/4#inet#fw4#vpn_domains
 nftset=/.virustotal.com/4#inet#fw4#vpn_domains
