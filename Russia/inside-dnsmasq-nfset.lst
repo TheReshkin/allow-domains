@@ -22,7 +22,6 @@ nftset=/.browser-intake-datadoghq.com/4#inet#fw4#vpn_domains
 nftset=/.o33249.ingest.sentry.io/4#inet#fw4#vpn_domains
 nftset=/.o33249.ingest.us.sentry.io/4#inet#fw4#vpn_domains
 nftset=/.openai.qualtrics.com/4#inet#fw4#vpn_domains
-nftset=/.com/4#inet#fw4#vpn_domains
 nftset=/.randaddress.com/4#inet#fw4#vpn_domains
 nftset=/.happ-proxy.com/4#inet#fw4#vpn_domains
 nftset=/.virustotal.com/4#inet#fw4#vpn_domains
