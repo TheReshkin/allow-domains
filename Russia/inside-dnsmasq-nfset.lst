@@ -1,3 +1,4 @@
+nftset=/.docker.com/4#inet#fw4#vpn_domains
 nftset=/.gitlab.com/4#inet#fw4#vpn_domains
 nftset=/.jfrog.com/4#inet#fw4#vpn_domains
 nftset=/.dbdesigner.net/4#inet#fw4#vpn_domains
