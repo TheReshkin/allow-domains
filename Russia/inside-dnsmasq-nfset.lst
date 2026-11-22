@@ -1,4 +1,4 @@
-nftset=/..google/4#inet#fw4#vpn_domains
+nftset=/.google/4#inet#fw4#vpn_domains
 nftset=/.cdnst.net/4#inet#fw4#vpn_domains
 nftset=/.ziffstatic.com/4#inet#fw4#vpn_domains
 nftset=/.cookielaw.org/4#inet#fw4#vpn_domains
