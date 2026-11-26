@@ -1,3 +1,6 @@
+nftset=/.cloudflareinsights.com/4#inet#fw4#vpn_domains
+nftset=/.torrindex.net/4#inet#fw4#vpn_domains
+nftset=/.unhappyweakness.com/4#inet#fw4#vpn_domains
 nftset=/.watchdisneyfe.com/4#inet#fw4#vpn_domains
 nftset=/.aespn.com/4#inet#fw4#vpn_domains
 nftset=/.abc.com/4#inet#fw4#vpn_domains
