@@ -1,3 +1,6 @@
+nftset=/.abc.com/4#inet#fw4#vpn_domains
+nftset=/.abc.com/4#inet#fw4#vpn_domains
+nftset=/.abcnews.com/4#inet#fw4#vpn_domains
 nftset=/.antigravity.google/4#inet#fw4#vpn_domains
 nftset=/.antigravity.google.com/4#inet#fw4#vpn_domains
 nftset=/.antigravity-unleash.goog/4#inet#fw4#vpn_domains
